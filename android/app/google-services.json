@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1032981032722",
+    "firebase_url": "https://application-74ce4.firebaseio.com",
+    "project_id": "application-74ce4",
+    "storage_bucket": "application-74ce4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032981032722:android:b0e1d4faea57b2a5ef8dcb",
+        "android_client_info": {
+          "package_name": "com.cuba.cuba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032981032722-jq41pm0pgrv0aimhlm3324s1els7jtrj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoWnYs9ptYY6nSHWjojhyFQ0R7V7p2Vho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032981032722-jq41pm0pgrv0aimhlm3324s1els7jtrj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
