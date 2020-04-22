@@ -90,24 +90,26 @@ class _MLPageState extends State<MLPage> {
         title: Text('Result'),
       ),
       body:
-          Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                 _croppedImage == null? Container():
-                  Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Image.file(_croppedImage,fit: BoxFit.contain)
-                  ),
+      SingleChildScrollView( child:
+      Center(
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _croppedImage == null? Container():
+              Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Image.file(_croppedImage,fit: BoxFit.contain)
+              ),
 
-                  Text('$_text'),
-                  ]
-            ),
-          ),
+              Text('$_text'),
+            ]
+        ),
+      ),
 
 
 
-      );
+      ),
+    );
 
   }
 }
