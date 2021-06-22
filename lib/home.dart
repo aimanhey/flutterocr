@@ -19,7 +19,7 @@ class _homePageState extends State<HomePage>{
     );
 
     if(tempFile != null){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => MLPage(tempFile)));
+      Navigator.push(context, MaterialPageRoute(builder: ( BuildContext context) => MLPage(tempFile)));
     }
   }
 
@@ -29,6 +29,7 @@ class _homePageState extends State<HomePage>{
     return  Scaffold(
         appBar: AppBar(
           title: const Text("Testing"),
+
         ),
         body: Stack(
           children: <Widget>[

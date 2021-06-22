@@ -1,0 +1,21 @@
+    
+  await showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          return Dialog(
+            backgroundColor: Colors.white24,
+
+            child: new Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.center,
+
+
+              children: [
+                new Image.file(filel),
+                new Text("Loading"),
+              ],
+            ),
+          );
+        },
+      );

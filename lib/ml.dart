@@ -11,6 +11,7 @@ class MLPage extends StatefulWidget {
 
   final File imageFile;
 
+
   MLPage(this.imageFile);
 
   @override
@@ -21,6 +22,7 @@ class _MLPageState extends State<MLPage> {
 
   File _croppedImage;
   String _text;
+  VisionText _readTexts;
 
   @override
   void initState() {
@@ -63,9 +65,9 @@ class _MLPageState extends State<MLPage> {
 
     FirebaseVisionImage ourImage = FirebaseVisionImage.fromFile(image);
     TextRecognizer recognizeText = FirebaseVision.instance.textRecognizer();
-    VisionText readText = await recognizeText.processImage(ourImage);
+     _readTexts = await recognizeText.processImage(ourImage);
 
-    for (TextBlock block in readText.blocks) {
+    for (TextBlock block in _readTexts.blocks) {
       for (TextLine line in block.lines) {
         for (TextElement word in line.elements) {
           tempText = tempText + " " + word.text;
@@ -76,6 +78,7 @@ class _MLPageState extends State<MLPage> {
     }
 
     setState(() {
+      print(_text);
       _text = tempText;
     });
   }
@@ -88,6 +91,8 @@ class _MLPageState extends State<MLPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Result'),
+          automaticallyImplyLeading: true,
+
       ),
       body:
       SingleChildScrollView( child:
@@ -101,7 +106,7 @@ class _MLPageState extends State<MLPage> {
                   child: Image.file(_croppedImage,fit: BoxFit.contain)
               ),
 
-              Text('$_text'),
+              Text("$_text"),
             ]
         ),
       ),
